@@ -1,0 +1,32 @@
+{
+  "name": "fooddrop",
+  "version": "1.0.0",
+  "description": "FoodDrop - Food Collection Game with Educational Content",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev:web",
+    "dev:web": "npm run dev --workspace=apps/web",
+    "dev:functions": "npm run dev --workspace=apps/functions",
+    "build": "npm run build:web && npm run build:functions",
+    "build:web": "npm run build --workspace=apps/web",
+    "build:functions": "npm run build --workspace=apps/functions",
+    "test": "npm run test:web && npm run test:functions",
+    "test:web": "npm run test --workspace=apps/web",
+    "test:functions": "npm run test --workspace=apps/functions",
+    "test:e2e": "playwright test",
+    "lint": "npm run lint --workspace=apps/web && npm run lint --workspace=apps/functions",
+    "typecheck": "npm run typecheck --workspace=apps/web && npm run typecheck --workspace=apps/functions",
+    "install:all": "npm install && npm install --workspace=apps/web && npm install --workspace=apps/functions"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
