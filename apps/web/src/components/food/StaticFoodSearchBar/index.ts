@@ -1,0 +1,1 @@
+export { StaticFoodSearchBar, type FoodSearchFilters } from './StaticFoodSearchBar';

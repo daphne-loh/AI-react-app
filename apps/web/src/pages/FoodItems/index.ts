@@ -1,0 +1,1 @@
+export { FoodItemsPage } from './FoodItemsPage';

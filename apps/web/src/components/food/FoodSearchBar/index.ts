@@ -1,0 +1,1 @@
+export { FoodSearchBar, type FoodSearchFilters } from './FoodSearchBar';

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/icons/icon-192x192.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    
+    <!-- Primary Meta Tags -->
+    <title>FoodDrop - Food Collection Game</title>
+    <meta name="title" content="FoodDrop - Food Collection Game" />
+    <meta name="description" content="Discover amazing foods from around the world through our collection game. Collect, learn, and explore global food culture!" />
+    <meta name="keywords" content="food, collection, game, culture, education, gachapon" />
+    <meta name="author" content="FoodDrop Team" />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#f39132" />
+    <meta name="background-color" content="#f1730a" />
+    <meta name="display" content="standalone" />
+    <meta name="orientation" content="portrait" />
+    
+    <!-- iOS PWA Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="FoodDrop" />
+    <link rel="apple-touch-icon" href="/icons/icon-152x152.png" />
+    
+    <!-- Android PWA Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fooddrop.app" />
+    <meta property="og:title" content="FoodDrop - Food Collection Game" />
+    <meta property="og:description" content="Discover amazing foods from around the world through our collection game. Collect, learn, and explore global food culture!" />
+    <meta property="og:image" content="/icons/icon-512x512.png" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://fooddrop.app" />
+    <meta property="twitter:title" content="FoodDrop - Food Collection Game" />
+    <meta property="twitter:description" content="Discover amazing foods from around the world through our collection game. Collect, learn, and explore global food culture!" />
+    <meta property="twitter:image" content="/icons/icon-512x512.png" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- PWA Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>

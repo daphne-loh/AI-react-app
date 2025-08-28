@@ -1,0 +1,1 @@
+export { FoodItemCard } from './FoodItemCard';
